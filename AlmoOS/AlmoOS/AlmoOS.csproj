@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6664837-A496-433E-A71A-D073E789C63D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlmoOS</RootNamespace>
+    <AssemblyName>AlmoOS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Escritorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Escritorio.Designer.cs">
+      <DependentUpon>Escritorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstilosWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstilosWindows.Designer.cs">
+      <DependentUpon>EstilosWindows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministradorTareas.Designer.cs">
+      <DependentUpon>AdministradorTareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Google.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Google.Designer.cs">
+      <DependentUpon>Google.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herencia.Designer.cs">
+      <DependentUpon>Herencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepMusica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepMusica.Designer.cs">
+      <DependentUpon>RepMusica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemaUTESA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemaUTESA.Designer.cs">
+      <DependentUpon>TemaUTESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemaWin7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemaWin7.Designer.cs">
+      <DependentUpon>TemaWin7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemaWinXP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemaWinXP.Designer.cs">
+      <DependentUpon>TemaWinXP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Escritorio.resx">
+      <DependentUpon>Escritorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstilosWindows.resx">
+      <DependentUpon>EstilosWindows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorTareas.resx">
+      <DependentUpon>AdministradorTareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Google.resx">
+      <DependentUpon>Google.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herencia.resx">
+      <DependentUpon>Herencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RepMusica.resx">
+      <DependentUpon>RepMusica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemaUTESA.resx">
+      <DependentUpon>TemaUTESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemaWin7.resx">
+      <DependentUpon>TemaWin7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemaWinXP.resx">
+      <DependentUpon>TemaWinXP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
